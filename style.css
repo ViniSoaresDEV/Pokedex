@@ -1,0 +1,163 @@
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html{
+    font-size: 62.5%;
+  }
+  
+  .container{
+            width: 80%;
+            padding: 20px;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        input[type="text"]{
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            font-size: 1.6rem;
+            outline: none;
+            text-align: center;
+        }
+
+        button{
+            width: 120px;
+            padding: 6px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: 200ms;
+        }
+
+        button:hover{
+            background-color: rgba(136, 136, 136, 0.3);
+        }
+
+        #resultado{
+            width: 20%;
+            border-radius: 20px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        #backgroundImage{
+            width: 100%;
+            min-height: 300px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #img{
+            max-width: 80%;
+            height: 200px;
+            align-self: center;
+        }
+
+        .pokemonNameInfo{
+            display: flex;
+            padding: 0 20px 0 20px;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 50px;
+        }
+
+        .pokemonNameInfo-Name{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            gap: 5px;
+        }
+
+        #pokemonName{
+            font-size: 2.0rem;
+            color: white;
+        }
+
+        .pokemonType{
+            width: 60px;
+            padding: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #pokemonType {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        #pokemonCode{
+            font-size: 1.6rem;
+            color: white;
+            margin-top: 3px;
+        }
+        
+        .pokemonInfoBox{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 20px 10px 20px;
+            min-height: 80px;
+        }
+
+        .pokemonInfoStatus{
+            display: flex;
+            font-size: 1.4rem;
+            gap: 20px;
+        }
+
+
+        /* ============================
+   🎨 CORES POR TIPO DE POKÉMON
+   ============================ */
+.type-normal    { background: #A8A77A; }
+.type-fire      { background: #EE8130; }
+.type-water     { background: #6390F0; }
+.type-electric  { background: #F7D02C; }
+.type-grass     { background: #7AC74C; }
+.type-ice       { background: #96D9D6; }
+.type-fighting  { background: #C22E28; }
+.type-poison    { background: #A33EA1; }
+.type-ground    { background: #E2BF65; }
+.type-flying    { background: #A98FF3; }
+.type-psychic   { background: #F95587; }
+.type-bug       { background: #A6B91A; }
+.type-rock      { background: #B6A136; }
+.type-ghost     { background: #735797; }
+.type-dragon    { background: #6F35FC; }
+.type-dark      { background: #705746; }
+.type-steel     { background: #B7B7CE; }
+.type-fairy     { background: #D685AD; }
+
+/* ============================
+   🎨 CORES DA POKÉDEX (pokemon-species)
+   ============================ */
+.color-black    { background: #4B4B4B; }
+.color-blue     { background: #6390F0; }
+.color-brown    { background: #A0522D; }
+.color-gray     { background: #A8A8A8; }
+.color-green    { background: #7AC74C; }
+.color-pink     { background: #FFB6C1; }
+.color-purple   { background: #A33EA1; }
+.color-red      { background: #FF4500; }
+.color-white    { background: #F8F8F8; }
+.color-yellow   { background: #FFD700; }

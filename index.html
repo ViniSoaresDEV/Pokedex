@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca de pokémon</h1>
+        <input type="text" id="input" placeholder="Digite o nome do pokémon">
+        <button id="btn">Buscar</button>
+        <div id="resultado">
+            <div id="backgroundImage">
+                <img src="images.png" id="img">
+                <div class="pokemonNameInfo">
+                    <div class="pokemonNameInfo-Name">
+                        <h3 id="pokemonName">-</h3>
+                        <div class="pokemonType">
+                            <p id="pokemonType">-</p>
+                        </div>
+                    </div>
+                    <p id="pokemonCode">#-</p>
+                </div>
+            </div>
+            <div class="pokemonInfoBox">
+                <div class="pokemonInfoStatus">
+                    <p>HP: </p>
+                    <p id="pokemonHpStatus">-</p>
+                </div>
+                <div class="pokemonInfoStatus">
+                    <p>Attack: </p>
+                    <p id="pokemonAttackStatus">-</p>
+                </div>
+                <div class="pokemonInfoStatus">
+                    <p>Defense: </p>
+                    <p id="pokemonDefenseStatus">-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
