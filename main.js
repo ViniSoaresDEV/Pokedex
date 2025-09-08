@@ -44,7 +44,7 @@ function showPokemon(pokemon) {
   img.src = pokemon.sprites.front_default;
   pokemonName.innerHTML = pokemon.name.toUpperCase();
   pokemonType.innerHTML = pokemon.types[0].type.name;
-  // pokemonType2.innerHTML = pokemon.types[1].type.name;
+  pokemon.types.length > 1 ? pokemonType2.innerHTML = pokemon.types[1].type.name : pokemonType2.innerHTML = '-'; 
   pokemonCode.innerHTML = `#${pokemon.id}`;
   pokemonHP.innerHTML = pokemon.stats[0].base_stat;
   pokemonAttack.innerHTML = pokemon.stats[1].base_stat;
