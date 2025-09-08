@@ -7,14 +7,16 @@ const pokemonName = document.querySelector("h3#pokemonName");
 const pokemonType = document.querySelector("p#pokemonType");
 const pokemonType2 = document.querySelector("p#pokemonType2");
 const pokemonCode = document.querySelector("p#pokemonCode");
-const pokemonHP = document.querySelector("p#pokemonHpStatus");
-const pokemonAttack = document.querySelector("p#pokemonAttackStatus");
-const pokemonDefense = document.querySelector("p#pokemonDefenseStatus");
+const pokemonHP = document.querySelector("span#pokemonHpStatus");
+const pokemonAttack = document.querySelector("span#pokemonAttackStatus");
+const pokemonDefense = document.querySelector("span#pokemonDefenseStatus");
+const defenseFillBar = document.querySelector("div#defense-fill");
+const attackFillBar = document.querySelector("div#attack-fill");
+const hpFillBar = document.querySelector("div#hp-fill");
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     searchPokemon(input.value.toLowerCase());
-    console.log(e);
   }
 });
 
@@ -44,11 +46,33 @@ function showPokemon(pokemon) {
   img.src = pokemon.sprites.front_default;
   pokemonName.innerHTML = pokemon.name.toUpperCase();
   pokemonType.innerHTML = pokemon.types[0].type.name;
-  pokemon.types.length > 1 ? pokemonType2.innerHTML = pokemon.types[1].type.name : pokemonType2.innerHTML = '-'; 
+  pokemon.types.length > 1
+    ? (pokemonType2.innerHTML = pokemon.types[1].type.name)
+    : (pokemonType2.innerHTML = "-");
   pokemonCode.innerHTML = `#${pokemon.id}`;
-  pokemonHP.innerHTML = pokemon.stats[0].base_stat;
-  pokemonAttack.innerHTML = pokemon.stats[1].base_stat;
-  pokemonDefense.innerHTML = pokemon.stats[2].base_stat;
+  const hpStatus = pokemon.stats[0].base_stat;
+  const attackStatus = pokemon.stats[1].base_stat;
+  const defenseStatus = pokemon.stats[2].base_stat;
+  statusBarChange(hpStatus, attackStatus, defenseStatus);
+}
+
+function statusBarChange(hp, attack, defense) {
+  const hpWidth = Number(hp);
+  const attackWidth = Number(attack);
+  const defenseWidth = Number(defense);
+
+  hpWidth > 100
+    ? (hpFillBar.style.width = "100%")
+    : (hpFillBar.style.width = hpWidth + "%");
+  attackWidth > 100
+    ? (attackFillBar.style.width = "100%")
+    : (attackFillBar.style.width = attackWidth + "%");
+  defenseWidth > 100
+    ? (defenseFillBar.style.width = "100%")
+    : (defenseFillBar.style.width = defenseWidth + "%");
+  pokemonHP.innerHTML = hp;
+  pokemonAttack.innerHTML = attack;
+  pokemonDefense.innerHTML = defense;
 }
 
 function changeBackground(pokemon) {
