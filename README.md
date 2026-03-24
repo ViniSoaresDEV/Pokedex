@@ -1,8 +1,8 @@
 # 🐾 PokéSearch - Buscador de Pokémon
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26-orange)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6-blue)
+![HTML5](https://img.shields.io/badge/HTML5-orange)
+![CSS3](https://img.shields.io/badge/CSS3-blue)
 ![API](https://img.shields.io/badge/Data-PokeAPI-ef5350)
 
 Uma aplicação interativa que consome a **PokeAPI** para buscar e exibir informações detalhadas sobre Pokémons. O projeto foca em uma experiência visual rica, adaptando as cores da interface dinamicamente de acordo com o tipo do Pokémon encontrado.
